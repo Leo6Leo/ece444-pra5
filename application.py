@@ -3,7 +3,7 @@ import pickle
 from flask import Flask, jsonify, request
 from sklearn.feature_extraction.text import CountVectorizer
 
-application = app = Flask(__name__)
+application = Flask(__name__)
 
 # Load the saved model and vectorizer
 with open("basic_classifier.pkl", "rb") as model_file:
@@ -36,4 +36,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)
